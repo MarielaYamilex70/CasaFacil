@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Usuario</title>
+</head>
+<body>
+    <h1>Adicionar Nuevo Usuario</h1>
+    <form action="AddUsuarioServlet" method="post">
+        <input type="hidden" name="id" value="" />
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="pwd">Contraseña:</label>
+        <input type="password" id="pwd" name="pwd" required>
+        <br>
+        <label for="puntuacion">Puntuación:</label>
+        <input type="number" id="puntuacion" name="puntuacion" required>
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+    <a href="ListarUsuariosServlet">Volver a la lista de usuarios</a>
+</body>
+</html>
