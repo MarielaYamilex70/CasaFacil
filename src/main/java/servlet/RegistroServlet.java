@@ -23,9 +23,13 @@ import gestion.UsuarioDAO;
 /**
  * Servlet implementation class RegistroServlets
  */
-@WebServlet("/RegistroServlet")
+//@WebServlet("/RegistroServlet")
 public class RegistroServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	public RegistroServlet() {
+        // Constructor por defecto
+    }
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse

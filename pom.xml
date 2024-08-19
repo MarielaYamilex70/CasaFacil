@@ -5,7 +5,8 @@
   <groupId>CasaFacil</groupId>
   <artifactId>CasaFacil</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+<!--  <packaging>jar</packaging>-->
+  <packaging>war</packaging>
 
   <name>CasaFacil</name>
   <url>http://maven.apache.org</url>
@@ -35,7 +36,7 @@
       <version>9.0.0</version>
       <scope></scope>
     </dependency>
-   
-        
   </dependencies>
+  
+  
 </project>
