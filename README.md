@@ -79,12 +79,18 @@ casa-facil/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── casaFacil/
-│   │   │           ├── servlet/
-│   │   │           └── consumoAPI/
+│   │   │   ├── casaFacil/
+│   │   │   ├── conectores/
+│   │   │   ├── consumoAPI/
+│   │   │   ├── gestion/
+│   │   │   ├── modelos/
+│   │   │   ├── resources/
+│   │   │   └── servlet/
+│   │   │ 
 │   │   ├── resources/
 │   │   └── webapp/
+│   │       ├── css/
+│   │       ├── images/
 │   │       ├── WEB-INF/
 │   │       │   ├── lib/
 │   │       │   └── web.xml
@@ -101,4 +107,4 @@ casa-facil/
 
 ---
 
-Este README proporciona una visión completa del proyecto, incluyendo características, tecnologías, instalación, uso, estructura y cómo contribuir. Asegúrate de personalizar la información específica y las rutas según tu configuración y necesidades.
+Este README proporciona una visión completa del proyecto, incluyendo características, tecnologías, instalación, uso y estructura. Asegúrate de personalizar la información específica y las rutas según tu configuración y necesidades.
