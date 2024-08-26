@@ -88,6 +88,7 @@ casa-facil/
 │   │   │   └── servlet/
 │   │   │ 
 │   │   ├── resources/
+│   │   │ 
 │   │   └── webapp/
 │   │       ├── css/
 │   │       ├── images/
@@ -97,6 +98,7 @@ casa-facil/
 │   │       ├── views/
 │   │       │   ├── 
 │   │       └── index.jsp
+│   │   
 │   └── test/
 │
 ├── Dockerfile
