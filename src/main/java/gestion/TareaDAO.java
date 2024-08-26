@@ -37,12 +37,11 @@ public class TareaDAO {
 				+ " - Puntos: " + tarea.getPuntuacion() + " - Obligatoria: " + tarea.isEsObligatoria() + " - Ciclo: "
 				+ tarea.getCiclo() + " - Estado: " + tarea.getEstado());
 
-		Connection connection = null;
+		//Connection connection = null;
 
 		try {
-
 			// Conexion a la BBDD
-			connection = DatabaseUtils.setConnection();
+			Connection connection = DatabaseUtils.setConnection();
 
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
@@ -106,12 +105,11 @@ public class TareaDAO {
 	// Método para actualizar una tarea en la base de datos
 	public boolean actualizarTarea(int id, Tarea tarea) {
 		String sql = "UPDATE tareas SET nombre = ?, descripcion = ?, puntuacion = ?, obligatoria = ?, ciclo = ?, estado = ? WHERE id = ?";
-		Connection connection = null;
+		//Connection connection = null;
 
 		try {
-
 			// Conexion a la BBDD
-			connection = DatabaseUtils.setConnection();
+			Connection connection = DatabaseUtils.setConnection();
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, tarea.getNombre());
@@ -137,12 +135,11 @@ public class TareaDAO {
 		Tarea tarea = null;
 		String sql = "SELECT * FROM tareas WHERE nombre = ?";
 
-		Connection connection = null;
+		//Connection connection = null;
 
 		try {
-
 			// Conexion a la BBDD
-			connection = DatabaseUtils.setConnection();
+			Connection connection = DatabaseUtils.setConnection();
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, nombre);
 
@@ -176,12 +173,11 @@ public class TareaDAO {
 		Tarea tarea = null;
 		String sql = "SELECT * FROM tareas WHERE id = ?";
 
-		Connection connection = null;
+		//Connection connection = null;
 
 		try {
-
 			// Conexion a la BBDD
-			connection = DatabaseUtils.setConnection();
+			Connection connection = DatabaseUtils.setConnection();
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(1, id);
@@ -218,12 +214,11 @@ public class TareaDAO {
 		Integer id = null;
 		String sql = "SELECT id FROM tareas WHERE nombre = ?";
 
-		Connection connection = null;
+		//Connection connection = null;
 
 		try {
-
 			// Conexion a la BBDD
-			connection = DatabaseUtils.setConnection();
+			Connection connection = DatabaseUtils.setConnection();
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, nombre);
@@ -245,12 +240,11 @@ public class TareaDAO {
 	public boolean borrarTarea(int id) {
 		String sql = "DELETE FROM tareas WHERE id = ?";
 
-		Connection connection = null;
+       //Connection connection = null;
 
 		try {
-
 			// Conexion a la BBDD
-			connection = DatabaseUtils.setConnection();
+			Connection connection = DatabaseUtils.setConnection();
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(1, id);

@@ -54,6 +54,24 @@ public class DatabaseUtils {
 	}
 
 	// Método para cerrar la conexión, el statement y el resultSet
+	
+	/*
+	 * A partir de Java 7, se introdujo la estructura try-with-resources, que
+	 * facilita la gestión de recursos que implementan la interfaz AutoCloseable
+	 * (que incluye Closeable, la cual es implementada por muchas clases de I/O y
+	 * conexiones). 
+	 * 
+	 * try (Connection connection = DriverManager.getConnection(url, user, password)) 
+	 * { 
+	 * 		// Usa la conexión aquí 
+	 * 
+	 * } catch (SQLException e) {
+	 * 		e.printStackTrace(); 
+	 * 
+	 * } 
+	 * // La conexión se cierra automáticamente al salir del bloque try
+	 */
+	
 	public static void closeConnection(ResultSet resultSet, Statement statement, Connection connection) {
 
 		try {

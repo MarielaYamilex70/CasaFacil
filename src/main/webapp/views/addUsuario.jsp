@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Fácil</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
     <!-- Incluir la cabecera -->
-    <jsp:include page="header.jsp" />
+    <jsp:include page="header2.jsp" />
 
     <!-- Contenido principal -->
     <div class="main-content">
@@ -17,7 +17,7 @@
          <h2>Adicionar Nuevo Usuario</h2>
 
 	    <!-- Formulario para adicionar -->
-	    <form action="AddUsuarioServlet" method="post" class="form-Add-Modi">
+	    <form action="../AddUsuarioServlet" method="post" class="form-Add-Modi">
 	    
 	        <input type="hidden" name="id" value="" />
 	        	<div class="form-group">

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Fácil</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
     <!-- Incluir la cabecera -->
-    <jsp:include page="header.jsp" />
+    <jsp:include page="header2.jsp" />
 
     <!-- Contenido principal -->
     <div class="main-content">
@@ -18,7 +18,7 @@
 
 	    <!-- Formulario para adicionar -->
 	    
-	    <form action="AddTareaServlet" method="POST" class="form-Add-Modi">
+	    <form action="../AddTareaServlet" method="POST" class="form-Add-Modi">
 	        <!-- Campo oculto para el ID de la tarea (solo necesario en la modificación) -->
 	        <input type="hidden" name="id" value="" />
 	

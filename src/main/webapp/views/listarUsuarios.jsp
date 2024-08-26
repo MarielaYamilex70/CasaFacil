@@ -29,7 +29,7 @@
     <div class="main-content">
        <div class="container-listaUsuarios">
        <!-- <h2>Lista de Usuarios</h2> -->
-	    <a href="addUsuario.jsp">Adicionar Nuevo Usuario</a>
+	    <a href="views/addUsuario.jsp">Adicionar Nuevo Usuario</a>
 	    <table border="1" cellpadding="10">
 	        <thead>
 	            <tr>

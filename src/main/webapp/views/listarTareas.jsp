@@ -30,7 +30,7 @@
     <div class="main-content">
       <div class="container">
       <!--  <h2>Lista de Tareas</h2> -->
-	    <a href="addTarea.jsp">Adicionar Nueva Tarea</a>
+	    <a href="views/addTarea.jsp">Adicionar Nueva Tarea</a>
 	    <table border="1" cellpadding="10">
 	        <thead>
 	            <tr>
