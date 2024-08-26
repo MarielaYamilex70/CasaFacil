@@ -44,7 +44,7 @@ public class ListarTareasUsuarioServlet extends HttpServlet {
 			List<UsuarioTarea> tareas = usuarioTareaDAO.obtenerTareasPorUsuario(usuarioId);
 			request.setAttribute("tareas", tareas);
 
-			RequestDispatcher dispatcher = request.getRequestDispatcher("listarTareasUsuario.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/listarTareasUsuario.jsp");
 			dispatcher.forward(request, response);
 
 		} catch (SQLException e) {

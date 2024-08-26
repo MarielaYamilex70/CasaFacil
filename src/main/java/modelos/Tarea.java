@@ -108,24 +108,5 @@ public class Tarea {
 				+ (esObligatoria ? "Sí" : "No") + " - Ciclo: " + ciclo + " - Estado: " + estado;
 	}
 
-	// Método para obtener el ID del usuario asignado a una tarea
-	/*
-	 * public int obtenerUsuarioIdPorTarea() { String sql =
-	 * "SELECT usuario_id FROM usuario_tarea WHERE tarea_id = ?"; int usuarioId =
-	 * -1;
-	 * 
-	 * Connection connection = null;
-	 * 
-	 * try {
-	 * 
-	 * // Conexion a la BBDD connection = DatabaseUtils.setConnection();
-	 * PreparedStatement statement = connection.prepareStatement(sql);
-	 * statement.setInt(1, this.id); ResultSet resultSet = statement.executeQuery();
-	 * 
-	 * if (resultSet.next()) { usuarioId = resultSet.getInt("usuario_id"); } } catch
-	 * (SQLException e) { e.printStackTrace(); }
-	 * 
-	 * return usuarioId; }
-	 */
-
+	
 }

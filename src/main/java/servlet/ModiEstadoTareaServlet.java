@@ -36,16 +36,14 @@ public class ModiEstadoTareaServlet extends HttpServlet {
 		try {
 			// Obtener parámetros de la solicitud
 			int usuarioTareaId = Integer.parseInt(request.getParameter("id"));
-			// int tareaId = Integer.parseInt(request.getParameter("tareaId"));
-
+			
 			String nuevoEstado = request.getParameter("estado");
 			int usuarioId = Integer.parseInt(request.getParameter("usuarioId"));
 
 			System.out.println("Usuario-Tarea ID: " + usuarioTareaId);
 
 			System.out.println("Usuario ID: " + usuarioId);
-			// System.out.println("Tarea ID: " + tareaId);
-
+			
 			// Validar los parámetros
 			if (nuevoEstado == null || nuevoEstado.isEmpty()) {
 				response.sendRedirect("listarTareas.jsp?error=Estado%20no%20válido");
@@ -56,7 +54,7 @@ public class ModiEstadoTareaServlet extends HttpServlet {
 			UsuarioTarea usuarioTarea = usuarioTareaDAO.obtenerUsuarioTareaPorId(usuarioTareaId);
 			if (usuarioTarea != null) {
 				usuarioTarea.setEstado(nuevoEstado);
-				// usuarioTareaDAO.actualizarTarea(usuarioTarea);
+				
 				usuarioTareaDAO.actualizarEstadoTarea(usuarioTareaId, nuevoEstado);
 				if (nuevoEstado.equals("completada")) {
 
@@ -84,9 +82,9 @@ public class ModiEstadoTareaServlet extends HttpServlet {
 				}
 			}
 
-			// Redirigir a la lista de tareas u otra página relevante
-			// response.sendRedirect("ListarTareasUsuarioServlet");
+			// Redirigir a la lista de tareas 
 			response.sendRedirect("ListarTareasUsuarioServlet?id=" + usuarioId);
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

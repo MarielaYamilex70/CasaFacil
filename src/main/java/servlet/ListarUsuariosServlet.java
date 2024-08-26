@@ -41,11 +41,11 @@ public class ListarUsuariosServlet extends HttpServlet {
 			String tareaIdStr = request.getParameter("tareaId");
 
 			if (tareaIdStr == null || tareaIdStr.isEmpty()) {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("listarUsuarios.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/views/listarUsuarios.jsp");
 				dispatcher.forward(request, response);
 			} else {
 				int tareaId = Integer.parseInt(request.getParameter("tareaId"));
-				RequestDispatcher dispatcher = request.getRequestDispatcher("asignarTareaUsuario.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/views/asignarTareaUsuario.jsp");
 				request.setAttribute("tareaId", tareaId);
 				dispatcher.forward(request, response);
 

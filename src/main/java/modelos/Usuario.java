@@ -82,12 +82,6 @@ public class Usuario {
 
 	// Método para representar al usuario como una cadena
 	@Override
-	/*
-	 * public String toString() { return "Usuario{" + "nombre='" + nombre + '\'' +
-	 * ", email='" + email + '\'' + ", pwd='" + pwd + '\'' + ", puntuacion=" +
-	 * puntuacion + '}'; }
-	 */
-
 	public String toString() {
 		return "Usuario{" + "id='" + id + '\'' + "nombre='" + nombre + '\'' + ", email='" + email + '\''
 				+ ", puntuacion=" + puntuacion + '}';

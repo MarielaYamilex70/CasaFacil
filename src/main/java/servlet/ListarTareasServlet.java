@@ -43,18 +43,11 @@ public class ListarTareasServlet extends HttpServlet {
 			// Obtener la lista de usuarios desde la base de datos
 			UsuarioDAO usuarioDAO = new UsuarioDAO();
 			List<Usuario> usuarios = usuarioDAO.obtenerTodosLosUsuarios();
+			
 			// Poner la lista de usuarios como atributo en la petición
 			request.setAttribute("usuarios", usuarios);
-
-			/*
-			 * // Obtener la lista de la relacion desde la base de datos UsuarioTareaDAO
-			 * usuarioTareaDAO = new UsuarioTareaDAO(); List<UsuarioTarea> usuariostareas =
-			 * usuarioTareaDAO.obtenerTodasLasRealaciones(); // Poner la lista de
-			 * usuariostareas como atributo en la petición
-			 * request.setAttribute("usuariostareas", usuariostareas);
-			 */
-
-			request.getRequestDispatcher("listarTareas.jsp").forward(request, response);
+			
+			request.getRequestDispatcher("/views/listarTareas.jsp").forward(request, response);
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

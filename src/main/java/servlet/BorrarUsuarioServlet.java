@@ -32,7 +32,7 @@ public class BorrarUsuarioServlet extends HttpServlet {
 		// Borrar la tarea de la base de datos
 		usuarioDAO.borrarUsuario(id);
 
-		// Redirigir a la página principal o mostrar un mensaje de éxito
+		// Redirigir a la página listar usuarios
 		response.sendRedirect("ListarUsuariosServlet");
 	}
 }

@@ -16,13 +16,7 @@ import java.sql.Statement;
 public class DatabaseUtils {
 
 	// Datos de conexión
-	/*
-	 * private static final String URL = "jdbc:mysql://localhost:3307/video_club";
-	 * // Cambia al puerto y base de datos correctos private static final String
-	 * USERNAME = "maryam"; private static final String PASSWORD =
-	 * "WR__so[B5k0ogkf7"; // Reemplaza con tu contraseña
-	 */
-
+	
 	private static final String URL = ConfigLoader.getProperty("db.url");
 	private static final String USERNAME = ConfigLoader.getProperty("db.user");
 	private static final String PASSWORD = ConfigLoader.getProperty("db.password");
@@ -53,9 +47,6 @@ public class DatabaseUtils {
 	public static Connection setConnection() throws SQLException {
 		if (connection == null || connection.isClosed()) {
 
-			// System.out.println("url: "+URL);
-			// System.out.println("usuario: "+USERNAME);
-			// System.out.println("password: "+PASSWORD);
 			return DriverManager.getConnection(URL, USERNAME, PASSWORD);
 		} else {
 			return connection;
@@ -82,10 +73,7 @@ public class DatabaseUtils {
 
 	// Método para ejecutar una consulta y devolver el ResultSet
 	public static ResultSet executeQuery(String query) {
-		// Connection connection = null;
-		// Statement statement = null;
-		// ResultSet resultSet = null;
-
+		
 		try {
 
 			// Crear la conexión si no existe
@@ -106,15 +94,5 @@ public class DatabaseUtils {
 		return null;
 	}
 
-	/*
-	 * public static void loadProperties() throws IOException { Properties
-	 * properties = new Properties(); String pathJdbcPropreties =
-	 * "resources/jdbc.properties"; try { FileInputStream input = new
-	 * FileInputStream(pathJdbcPropreties); properties.load(input); url =
-	 * properties.getProperty("jdbc.url"); usuario =
-	 * properties.getProperty("jdbc.username"); password =
-	 * properties.getProperty("jdbc.password"); } catch (FileNotFoundException e) {
-	 * e.printStackTrace(); } }
-	 */
-
+	
 }

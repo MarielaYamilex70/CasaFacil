@@ -42,7 +42,7 @@ public class ModiUsuarioServlet extends HttpServlet {
 		request.setAttribute("usuario", usuario);
 
 		// Redirigir al JSP de modificación de usuario
-		RequestDispatcher dispatcher = request.getRequestDispatcher("modiUsuario.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/modiUsuario.jsp");
 		dispatcher.forward(request, response);
 	}
 }

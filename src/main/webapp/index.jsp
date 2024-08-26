@@ -5,7 +5,7 @@
 	//Redirigir al login si no hay usuario en sesión
 	if (usuarioSession == null) {
 	    response.sendRedirect("login.html"); // O "LoginServlet", dependiendo de cómo manejas el login
-	    return;
+    return;
 	} 
 %>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
 <body>
 
     <!-- Incluir la cabecera -->
-    <jsp:include page="header.jsp" />
+    <jsp:include page="/views/header.jsp" />
 
     <!-- Contenido principal -->
     <div class="main-content">
@@ -35,7 +35,7 @@
     </div>
 
     <!-- Incluir el pie de página -->
-    <jsp:include page="footer.jsp" />
+    <jsp:include page="/views/footer.jsp" />
 
 </body>
 </html>

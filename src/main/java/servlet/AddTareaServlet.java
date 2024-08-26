@@ -31,9 +31,7 @@ public class AddTareaServlet extends HttpServlet {
 		String ciclo = request.getParameter("ciclo");
 		String estado = request.getParameter("estado");
 
-		// System.out.println("ciclo: "+ciclo);
-		// System.out.println("estado: "+estado);
-
+		
 		Tarea tarea = new Tarea(nombre, descripcion, puntuacion, esObligatoria, ciclo, estado);
 
 		System.out.println("Nueva Tarea: " + tarea.toString());

@@ -28,7 +28,7 @@ public class BorrarTareaServlet extends HttpServlet {
 		// Borrar la tarea de la base de datos
 		tareaDAO.borrarTarea(id);
 
-		// Redirigir a la página principal o mostrar un mensaje de éxito
+		// Redirigir a la página listar tareas
 		response.sendRedirect("ListarTareasServlet");
 	}
 }

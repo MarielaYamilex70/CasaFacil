@@ -33,7 +33,7 @@ public class ModiTareaServlet extends HttpServlet {
 		response.getWriter().println("<p>ID: " + id + "</p>");
 		response.getWriter().println("</body></html>");
 
-		//
+		
 		TareaDAO tareaDAO = new TareaDAO();
 
 		// Obtener la tarea desde la base de datos
@@ -43,7 +43,7 @@ public class ModiTareaServlet extends HttpServlet {
 		request.setAttribute("tarea", tarea);
 
 		// Redirigir a la página de modificación de tarea
-		RequestDispatcher dispatcher = request.getRequestDispatcher("modiTarea.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/modiTarea.jsp");
 		dispatcher.forward(request, response);
 	}
 }

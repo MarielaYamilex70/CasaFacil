@@ -31,10 +31,7 @@ public class RegistroServlet extends HttpServlet {
         // Constructor por defecto
     }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -48,27 +45,7 @@ public class RegistroServlet extends HttpServlet {
 
 		// Añadir la lógica para procesar los datos del formulario
 		// Guardar los datos en una base de datos o validar las entradas
-
-		/*
-		 * String insertQuery =
-		 * "INSERT INTO usuarios (nombre, email, pwd) VALUES ('"+name+"','"+email+"','"+
-		 * password+"');";
-		 * 
-		 * // Obtener el ResultSet usando el método executeQuery ResultSet resultSet =
-		 * null; Statement statement = null; Connection connection = null;
-		 * 
-		 * try {
-		 * 
-		 * 
-		 * // Ejecutar la consulta y obtener el ResultSet connection =
-		 * DatabaseUtils.setConnection();
-		 * 
-		 * statement = connection.createStatement();
-		 * 
-		 * int rowsAffected = statement.executeUpdate(insertQuery); if (rowsAffected>0)
-		 * {
-		 */
-
+		
 		try {
 
 			Usuario usuario = new Usuario(name, email, password, 0);
@@ -76,9 +53,7 @@ public class RegistroServlet extends HttpServlet {
 
 			if (usuarioDAO.addUsuario(usuario)) {
 
-				// request.getSession().setAttribute("nombre", name);
-				// response.sendRedirect("welcome.html");
-
+				
 				request.getSession().setAttribute("usuarioSession", usuario);
 				// Redirecciona a usuario.jsp usando forward
 				RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
@@ -90,11 +65,7 @@ public class RegistroServlet extends HttpServlet {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			// Cerrar el ResultSet, Statement y Connection
-			// DatabaseUtils.closeConnection(resultSet, statement, connection);
-
-		}
+		} 
 
 	}
 

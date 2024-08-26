@@ -1,5 +1,14 @@
 <%@ page import="java.util.List" %>
 <%@ page import="modelos.Usuario" %>
+<%
+    // Recuperar el usuario de la sesión
+    Usuario usuarioSession = (Usuario) session.getAttribute("usuarioSession");
+	//Redirigir al login si no hay usuario en sesión
+	if (usuarioSession == null) {
+	    response.sendRedirect("login.html"); // O "LoginServlet", dependiendo de cómo manejas el login
+    return;
+	} 
+%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
